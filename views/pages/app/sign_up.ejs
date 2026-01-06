@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your free Temp Number account to start receiving SMS verification codes. Get instant access to temporary phone numbers for secure online verification.">
+  <meta name="keywords" content="sign up, create account, register, free account, temp number registration">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://temp-number.com/app/signup">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://temp-number.com/app/signup">
+  <meta property="og:title" content="Sign Up - Create Your Account | Temp Number">
+  <meta property="og:description" content="Create your free Temp Number account to start receiving SMS verification codes. Get instant access to temporary phone numbers for secure online verification.">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sign Up - Create Your Account | Temp Number">
+  <meta name="twitter:description" content="Create your free Temp Number account to start receiving SMS verification codes. Get instant access to temporary phone numbers for secure online verification.">
+  
+  <title>Sign Up - Create Your Account | Temp Number</title>
+  <link rel="icon" href="/image/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <%- include('../../components/app_navbar') %>
+
+    <!-- Success Message Modal -->
+    <% if (typeof success !=='undefined' && success) { %>
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="successModalLabel">Success</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= success %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+
+        <div class="container py-4 py-md-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+              <div class="signup-container">
+                <div class="heading text-center mb-4">Sign Up</div>
+
+                <form id="signup-form" action="/app/signup" method="POST" class="form" novalidate>
+                  <!-- Email Field -->
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="input-wrapper">
+                      <input required class="input form-control" type="email" name="email" id="email"
+                        placeholder="Enter your email" autocomplete="email">
+                    </div>
+                    <div class="field-error" id="email-error"></div>
+                  </div>
+
+                  <!-- Password Field -->
+                  <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-wrapper">
+                      <input required class="input form-control" type="password" name="password" id="password"
+                        placeholder="Create a password" autocomplete="new-password" minlength="6">
+                      <button type="button" class="btn btn-link password-toggle" id="togglePassword"
+                        aria-label="Toggle password visibility">
+                        <i class="fas fa-eye" id="passwordIcon"></i>
+                      </button>
+                    </div>
+                    <div class="field-error" id="password-error"></div>
+                  </div>
+
+                  <!-- Confirm Password Field -->
+                  <div class="form-group">
+                    <label for="confirm_password" class="form-label">Confirm Password</label>
+                    <div class="input-wrapper">
+                      <input required class="input form-control" type="password" name="confirm_password"
+                        id="confirm_password" placeholder="Confirm your password" autocomplete="new-password">
+                      <button type="button" class="btn btn-link password-toggle" id="toggleConfirmPassword"
+                        aria-label="Toggle confirm password visibility">
+                        <i class="fas fa-eye" id="confirmPasswordIcon"></i>
+                      </button>
+                    </div>
+                    <div class="field-error" id="confirm-password-error"></div>
+                  </div>
+
+                  <!-- General Error Message -->
+                  <div id="error-message" class="alert-message alert-error d-none mb-3" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <span id="error-text">
+                      <%= typeof error !=='undefined' ? error : '' %>
+                    </span>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button class="btn signup-button w-100" type="submit" id="submitBtn">
+                    <span class="btn-text">Create Account</span>
+                    <span class="spinner-border spinner-border-sm d-none ms-2" id="submitSpinner" role="status"></span>
+                  </button>
+                </form>
+
+                <div class="signup-link text-center mt-4">
+                  <span class="text-muted">Already have an account?</span>
+                  <a href="/app/login" class="ms-1">Sign In</a>
+                </div>
+
+                <div class="social-account-container mt-4">
+                  <div class="divider mb-3">
+                    <span class="divider-line"></span>
+                    <span class="divider-text">Or Sign up with</span>
+                    <span class="divider-line"></span>
+                  </div>
+                  <div class="social-accounts d-flex justify-content-center gap-3">
+                    <button class="btn social-button google rounded-circle" type="button"
+                      aria-label="Sign up with Google">
+                      <i class="fa-brands fa-google"></i>
+                    </button>
+                    <button class="btn social-button apple rounded-circle" type="button"
+                      aria-label="Sign up with Apple">
+                      <i class="fa-brands fa-apple"></i>
+                    </button>
+                    <button class="btn social-button twitter rounded-circle" type="button"
+                      aria-label="Sign up with Twitter">
+                      <i class="fa-brands fa-twitter"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          // Password visibility toggle
+          const togglePassword = document.getElementById('togglePassword');
+          const passwordInput = document.getElementById('password');
+          const passwordIcon = document.getElementById('passwordIcon');
+
+          const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+          const confirmPasswordInput = document.getElementById('confirm_password');
+          const confirmPasswordIcon = document.getElementById('confirmPasswordIcon');
+
+          if (togglePassword && passwordInput) {
+            togglePassword.addEventListener('click', function () {
+              const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+              passwordInput.setAttribute('type', type);
+              passwordIcon.classList.toggle('fa-eye');
+              passwordIcon.classList.toggle('fa-eye-slash');
+            });
+          }
+
+          if (toggleConfirmPassword && confirmPasswordInput) {
+            toggleConfirmPassword.addEventListener('click', function () {
+              const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+              confirmPasswordInput.setAttribute('type', type);
+              confirmPasswordIcon.classList.toggle('fa-eye');
+              confirmPasswordIcon.classList.toggle('fa-eye-slash');
+            });
+          }
+
+          // Form validation
+          const form = document.getElementById("signup-form");
+          const submitBtn = document.getElementById("submitBtn");
+          const btnText = submitBtn.querySelector('.btn-text');
+          const submitSpinner = document.getElementById("submitSpinner");
+          const errorMessage = document.getElementById("error-message");
+          const errorText = document.getElementById("error-text");
+
+          // Field error elements
+          const emailError = document.getElementById('email-error');
+          const passwordError = document.getElementById('password-error');
+          const confirmPasswordError = document.getElementById('confirm-password-error');
+          const emailInput = document.getElementById('email');
+
+          // Helper function to show field error
+          function showFieldError(field, errorElement, message) {
+            field.classList.add('has-error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+          }
+
+          // Helper function to clear field error
+          function clearFieldError(field, errorElement) {
+            field.classList.remove('has-error');
+            errorElement.textContent = '';
+            errorElement.classList.remove('show');
+          }
+
+          // Real-time validation - only after user interaction
+          if (emailInput) {
+            emailInput.addEventListener('blur', function () {
+              if (!this.value) {
+                showFieldError(this, emailError, 'Email is required');
+              } else if (!this.validity.valid) {
+                showFieldError(this, emailError, 'Please enter a valid email address');
+              } else {
+                clearFieldError(this, emailError);
+              }
+            });
+
+            emailInput.addEventListener('input', function () {
+              if (this.classList.contains('has-error') && this.validity.valid) {
+                clearFieldError(this, emailError);
+              }
+            });
+          }
+
+          if (passwordInput) {
+            passwordInput.addEventListener('blur', function () {
+              if (!this.value) {
+                showFieldError(this, passwordError, 'Password is required');
+              } else if (this.value.length < 6) {
+                showFieldError(this, passwordError, 'Password must be at least 6 characters');
+              } else {
+                clearFieldError(this, passwordError);
+              }
+            });
+
+            passwordInput.addEventListener('input', function () {
+              if (this.classList.contains('has-error') && this.value.length >= 6) {
+                clearFieldError(this, passwordError);
+              }
+              // Check password match if confirm password has value
+              if (confirmPasswordInput.value) {
+                if (this.value !== confirmPasswordInput.value) {
+                  showFieldError(confirmPasswordInput, confirmPasswordError, 'Passwords do not match');
+                } else {
+                  clearFieldError(confirmPasswordInput, confirmPasswordError);
+                }
+              }
+            });
+          }
+
+          // Real-time password matching validation
+          if (confirmPasswordInput && passwordInput) {
+            confirmPasswordInput.addEventListener('blur', function () {
+              if (!this.value) {
+                showFieldError(this, confirmPasswordError, 'Please confirm your password');
+              } else if (this.value !== passwordInput.value) {
+                showFieldError(this, confirmPasswordError, 'Passwords do not match');
+              } else {
+                clearFieldError(this, confirmPasswordError);
+              }
+            });
+
+            confirmPasswordInput.addEventListener('input', function () {
+              if (this.value && this.value === passwordInput.value) {
+                clearFieldError(this, confirmPasswordError);
+              } else if (this.value && this.value !== passwordInput.value) {
+                showFieldError(this, confirmPasswordError, 'Passwords do not match');
+              }
+            });
+          }
+
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            // Hide previous error
+            errorMessage.classList.add("d-none");
+
+            // Clear all field errors
+            clearFieldError(emailInput, emailError);
+            clearFieldError(passwordInput, passwordError);
+            clearFieldError(confirmPasswordInput, confirmPasswordError);
+
+            // Validate email
+            if (!emailInput.value) {
+              showFieldError(emailInput, emailError, 'Email is required');
+              emailInput.focus();
+              return;
+            } else if (!emailInput.validity.valid) {
+              showFieldError(emailInput, emailError, 'Please enter a valid email address');
+              emailInput.focus();
+              return;
+            }
+
+            // Validate password
+            if (!passwordInput.value) {
+              showFieldError(passwordInput, passwordError, 'Password is required');
+              passwordInput.focus();
+              return;
+            } else if (passwordInput.value.length < 6) {
+              showFieldError(passwordInput, passwordError, 'Password must be at least 6 characters');
+              passwordInput.focus();
+              return;
+            }
+
+            // Validate confirm password
+            if (!confirmPasswordInput.value) {
+              showFieldError(confirmPasswordInput, confirmPasswordError, 'Please confirm your password');
+              confirmPasswordInput.focus();
+              return;
+            } else if (passwordInput.value !== confirmPasswordInput.value) {
+              showFieldError(confirmPasswordInput, confirmPasswordError, 'Passwords do not match');
+              confirmPasswordInput.focus();
+              return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Signing up...';
+            submitSpinner.classList.remove("d-none");
+
+            const formData = new FormData(this);
+            const data = {
+              email: formData.get('email'),
+              password: formData.get('password'),
+              confirm_password: formData.get('confirm_password')
+            };
+
+            try {
+              const response = await fetch('/app/signup', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+              });
+
+              const result = await response.json();
+
+              if (response.ok) {
+                btnText.textContent = 'Success! Redirecting...';
+                setTimeout(() => {
+                  window.location.href = '/app/login';
+                }, 1000);
+              } else {
+                errorText.textContent = result.error || 'Signup failed. Please try again.';
+                errorMessage.classList.remove("d-none");
+
+                submitBtn.disabled = false;
+                btnText.textContent = 'Sign Up';
+                submitSpinner.classList.add("d-none");
+              }
+            } catch (err) {
+              console.error('Fetch Error:', err);
+              errorText.textContent = 'Network error. Please check your connection and try again.';
+              errorMessage.classList.remove("d-none");
+
+              submitBtn.disabled = false;
+              btnText.textContent = 'Sign Up';
+              submitSpinner.classList.add("d-none");
+            }
+          });
+
+          // Auto-show success modal
+          document.addEventListener('DOMContentLoaded', function () {
+            const successModal = document.getElementById('successModal');
+            if (successModal) {
+              const modal = new bootstrap.Modal(successModal);
+              modal.show();
+            }
+          });
+        </script>
+
+        <script src="/js/script.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

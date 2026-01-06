@@ -1,0 +1,29 @@
+# robots.txt for Temp Number
+# This file tells search engine crawlers which pages they can access
+
+# Allow all search engines to crawl public pages
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /blog
+Allow: /contactus
+Allow: /privacy-policy
+Allow: /api
+Allow: /service
+Allow: /country
+Allow: /try_now
+
+# Allow login and signup pages (public pages)
+Allow: /app/login
+Allow: /app/signup
+
+# Disallow crawling of CSV files and other data files
+Disallow: /*.csv$
+Disallow: /image/transactions_history.csv
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://temp-number.com/sitemap.xml
+

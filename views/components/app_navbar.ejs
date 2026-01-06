@@ -1,0 +1,86 @@
+<!-- Navbar -->
+<nav class="app-navbar navbar navbar-expand-lg navbar-light shadow-sm sticky-top py-3 main-navbar" role="navigation"
+  aria-label="App navigation">
+  <div class="container">
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2 brand-area" href="/" aria-label="Temp Number Home">
+      <span class="logo-shell flex-shrink-0">
+        <img src="/image/logo.png" alt="Temp Number logo" class="logo" style="height: 46px;" loading="eager">
+      </span>
+      <div class="d-flex flex-column lh-1 brand-copy">
+        <strong class="fw-semibold text-uppercase">Temp Number</strong>
+        <small class="text-muted text-capitalize d-none d-sm-block">receive sms online</small>
+      </div>
+    </a>
+
+    <!-- PRO and Balance Buttons -->
+    <div class="app-buttons d-flex align-items-center gap-2 ms-auto">
+      <button class="app-pro btn btn-sm" type="button">
+        <i class="fas fa-crown me-1"></i>
+        <span class="d-none d-md-inline">PRO</span>
+      </button>
+      <a href="/app/payment" class="text-decoration-none">
+        <button class="app-balance btn btn-sm" type="button">
+          <i class="fas fa-wallet me-1"></i>
+          <span class="balance-text">$<%= typeof balance !=='undefined' ? balance : 0 %></span>
+        </button>
+      </a>
+    </div>
+
+    <!-- Three Dots Menu Toggle (Always visible) -->
+    <button class="app-menu-toggle btn btn-link" type="button" id="appMenuToggle" aria-label="Toggle menu">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Sidebar Backdrop (for mobile) -->
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<!-- Sidebar -->
+<div class="app-sidebar" id="appSidebar">
+  <div class="sidebar-header d-flex align-items-center justify-content-between">
+    <h3 class="mb-0">Menu</h3>
+    <button class="sidebar-close btn btn-link p-0" type="button" id="sidebarClose" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <ul class="app-sidebar-list list-unstyled mb-0">
+    <li>
+      <a href="/app/countries" class="sidebar-link">
+        <i class="fas fa-plus-circle"></i>
+        <span>Order New</span>
+      </a>
+    </li>
+    <li>
+      <a href="/app/payment" class="sidebar-link">
+        <i class="fas fa-wallet"></i>
+        <span>Funds</span>
+      </a>
+    </li>
+    <li>
+      <a href="/app/transactions" class="sidebar-link">
+        <i class="fas fa-exchange-alt"></i>
+        <span>Transactions</span>
+      </a>
+    </li>
+    <li>
+      <a href="/app/history" class="sidebar-link">
+        <i class="fas fa-history"></i>
+        <span>History</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-bell"></i>
+        <span>Notifications</span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get temporary phone numbers for SMS verification. Protect your privacy with disposable numbers for WhatsApp, Telegram, Facebook, and more. Fast, secure, and reliable.">
+  <meta name="keywords" content="temporary phone number, SMS verification, disposable number, virtual phone number, OTP verification, WhatsApp verification, Telegram verification, online privacy, phone number privacy">
+  <meta name="author" content="Temp Number">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://temp-number.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://temp-number.com/">
+  <meta property="og:title" content="Temp Number - Temporary Phone Numbers for Online Verification">
+  <meta property="og:description" content="Get temporary phone numbers for SMS verification. Protect your privacy with disposable numbers for WhatsApp, Telegram, Facebook, and more. Fast, secure, and reliable.">
+  <meta property="og:image" content="https://temp-number.com/image/logo.png">
+  <meta property="og:site_name" content="Temp Number">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://temp-number.com/">
+  <meta name="twitter:title" content="Temp Number - Temporary Phone Numbers for Online Verification">
+  <meta name="twitter:description" content="Get temporary phone numbers for SMS verification. Protect your privacy with disposable numbers for WhatsApp, Telegram, Facebook, and more. Fast, secure, and reliable.">
+  <meta name="twitter:image" content="https://temp-number.com/image/logo.png">
+  
+  <title>Temp Number - Temporary Phone Numbers for Online Verification</title>
+  <link rel="icon" href="/image/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Corrected Path -->
+  <meta name="google-adsense-account" content="ca-pub-7967927643717482">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7967927643717482"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <%- include('../components/navbar') %>
+    <%- include('../components/scrollupbtn') %>
+
+      <!-- Left Text Section -->
+      <div class="container hero-section-container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="hero-content-wrapper">
+              <!-- Trust Badge -->
+              <div class="hero-badge">
+                <i class="fa-solid fa-shield-check"></i>
+                <span>Trusted by 100,000+ Users</span>
+              </div>
+
+              <!-- Main Title -->
+              <h1 class="hero-title">
+                <span class="hero-title-gradient">Temp Number</span> Second Phone
+              </h1>
+
+              <!-- Subtitle -->
+              <p class="hero-description">
+                Receive SMS Online using Temporary Second Phone Numbers from all over the world.
+                <strong class="hero-description-highlight">Fast, Secure & Reliable.</strong>
+              </p>
+
+              <!-- Feature Highlights -->
+              <div class="hero-features">
+                <div class="hero-feature-item">
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>80+ Countries Available</span>
+                </div>
+                <div class="hero-feature-item">
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Instant Activation</span>
+                </div>
+                <div class="hero-feature-item">
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Real SIM Cards</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="hero-actions">
+                <a href="/app/countries" class="btn btn-primary-hero">
+                  <i class="fa-solid fa-rocket"></i>
+                  <span>Get Started Free</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button class="btn btn-secondary-hero">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Watch Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- For Service List -->
+          <!-- <div id="serviceList" class="list-group"></div> -->
+
+          <!-- For Country List -->
+          <!-- <div id="country" class="list-group"></div> -->
+
+          <div class="col-12 col-lg-6">
+            <div class="form-card mx-auto p-4 p-md-5 mt-0 mt-md-4 w-100 w-md-75">
+              <form>
+
+                <div class="mb-3">
+                  <label for="countryDropdown" class="form-label">Country</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-globe"></i>
+                    </span>
+                    <select id="countryDropdown" class="form-select">
+                      <option selected disabled>Select a country</option> <!-- Options will be dynamically added -->
+                    </select>
+                  </div>
+                </div>
+                
+                <!-- Service Field -->
+                <!-- Service Dropdown with Search -->
+                <div class="mb-3">
+                  <label for="service" class="form-label">Service</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <!-- <input type="text" id="serviceSearch" class="form-control" placeholder="Search service..."> -->
+                    <select id="serviceDropdown" class="form-select">
+                      <option selected disabled>Select a service</option> <!-- Options will be dynamically added -->
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Selected Information -->
+                <!-- <div>
+              <p>Selected Service: <span id="selectedService">N/A</span></p>
+              <p>Selected Country: <span id="selectedCountry">N/A</span></p>
+              <p>Price: <span id="countryPrice">N/A</span></p>
+            </div> -->
+                <!-- Submit Button -->
+                <button id="appButton" type="button" class="btn btn-primary-custom text-white btn-lg w-100 fs-6" disabled>
+                  Get Number →
+                </button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stars/Testimonial Section -->
+      <section class="stars-testimonial-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+              <div class="stars-card">
+                <div class="row align-items-center g-4">
+                  <!-- Left: Stars & Rating -->
+                  <div class="col-12 col-md-5 col-lg-4">
+                    <div class="stars-rating-box">
+                      <div class="stars-wrapper">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="rating-info">
+                        <div class="rating-score">5.0</div>
+                        <div class="rating-count">500,000+ downloads</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right: Testimonial Content -->
+                  <div class="col-12 col-md-7 col-lg-8">
+                    <div class="testimonial-text-box">
+                      <h2 class="testimonial-heading">
+                        Trusted by more than 100,000 paid customers and counting...
+                      </h2>
+                      <p class="testimonial-text">
+                        Despite the widely recognized challenge of providing numbers on real SIM cards, our
+                        service ensures that you receive premium, paid numbers with the highest possible
+                        success rates for receiving SMS messages in the market.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section-wrapper py-5 mt-5" id="feature">
+        <div class="features-background-pattern"></div>
+        <div class="container position-relative">
+          <div class="features-header text-center mb-5">
+            <h2 class="features-title fw-bold mb-3">Features</h2>
+            <p class="features-subtitle mx-auto">
+              Temp Number offers short-term usage phone numbers from different countries to receive SMS
+              messages at fair and affordable prices.
+            </p>
+          </div>
+          <div class="row g-4 g-md-5 justify-content-center">
+            <!-- First Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-purple">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">Global Number Selection</h3>
+                  <p class="feature-description">
+                    Pick your number from a pool of thousands of different numbers worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Second Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-pink">
+                    <i class="fas fa-atom"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">Innovative Calling Features</h3>
+                  <p class="feature-description">
+                    The app encompasses multiple features like call forwarding, ACW, call recording, etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Third Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-orange">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">Voicemail Facility</h3>
+                  <p class="feature-description">
+                    Includes voicemail functionality to ensure you never miss any messages.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Fourth Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-blue">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">Seamless Communication</h3>
+                  <p class="feature-description">
+                    Enjoy smooth, hassle-free communication anytime, anywhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Fifth Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-yellow">
+                    <i class="fas fa-headphones"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">24/7 Support</h3>
+                  <p class="feature-description">
+                    Get round-the-clock support for all your queries and issues.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Sixth Feature -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-custom-pink-alt">
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                </div>
+                <div class="feature-content">
+                  <h3 class="feature-heading">Advanced Technology</h3>
+                  <p class="feature-description">
+                    Leverage cutting-edge technology to enhance your experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- how it work -->
+      <section class="how-it-works-section py-5 mt-5">
+        <div class="container">
+          <div class="how-it-works-header text-center mb-5">
+            <h2 class="how-it-works-title fw-bold mb-3" id="how-it-works">How It Works</h2>
+            <p class="how-it-works-subtitle text-muted mx-auto">
+              Our streamlined process ensures you get the best temporary phone numbers with maximum reliability
+            </p>
+          </div>
+
+          <div class="row g-4 g-md-5 justify-content-center align-items-stretch">
+            <!-- Inputs Column -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="work-box h-100">
+                <div class="work-icon-wrapper">
+                  <div class="work-icon">
+                    <i class="fas fa-box"></i>
+                  </div>
+                </div>
+                <div class="work-content">
+                  <h3 class="work-title">Inputs</h3>
+                  <ul class="work-list">
+                    <li><i class="fas fa-check"></i> Independent providers</li>
+                    <li><i class="fas fa-check"></i> Connectivity networks</li>
+                    <li><i class="fas fa-check"></i> Owned infrastructure</li>
+                  </ul>
+                </div>
+                <div class="work-arrow d-none d-lg-block">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="work-arrow-mobile d-lg-none text-center mt-3">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Process Column -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="work-box h-100">
+                <div class="work-icon-wrapper">
+                  <div class="work-icon">
+                    <i class="fas fa-cogs"></i>
+                  </div>
+                </div>
+                <div class="work-content">
+                  <h3 class="work-title">Process</h3>
+                  <ul class="work-list">
+                    <li><i class="fas fa-check"></i> Service optimization</li>
+                    <li><i class="fas fa-check"></i> Quality assurance</li>
+                    <li><i class="fas fa-check"></i> Dynamic pricing</li>
+                    <li><i class="fas fa-check"></i> Infrastructure scaling</li>
+                  </ul>
+                </div>
+                <div class="work-arrow d-none d-lg-block">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="work-arrow-mobile d-lg-none text-center mt-3">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Outputs Column -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="work-box h-100">
+                <div class="work-icon-wrapper">
+                  <div class="work-icon">
+                    <i class="fas fa-share-square"></i>
+                  </div>
+                </div>
+                <div class="work-content">
+                  <h3 class="work-title">Outputs</h3>
+                  <ul class="work-list">
+                    <li><i class="fas fa-check"></i> Streamlined interface</li>
+                    <li><i class="fas fa-check"></i> Advanced APIs</li>
+                    <li><i class="fas fa-check"></i> Transparent billing</li>
+                    <li><i class="fas fa-check"></i> 24/7 support</li>
+                  </ul>
+                </div>
+                <div class="work-arrow d-none d-lg-block">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="work-arrow-mobile d-lg-none text-center mt-3">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Happy Clients Column -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="work-box h-100">
+                <div class="work-icon-wrapper">
+                  <div class="work-icon">
+                    <i class="fas fa-smile"></i>
+                  </div>
+                </div>
+                <div class="work-content">
+                  <h3 class="work-title">Happy Clients</h3>
+                  <ul class="work-list">
+                    <li><i class="fas fa-check"></i> Cost-effective plans</li>
+                    <li><i class="fas fa-check"></i> Scalable solutions</li>
+                    <li><i class="fas fa-check"></i> Global reach</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- calling -->
+      <!-- <div class="container py-5 bg-white rounded">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 phone-section text-center mb-4 mb-md-0">
+        <img src="https://dialerhq.com/wp-content/uploads/2022/05/Lower-Calling-Costs.png" alt="Phone Illustration"
+          class="img-fluid rounded">
+      </div>
+      
+      <div class="col-md-6 text-section">
+        <h2 class="fw-bold">Lower Calling Costs</h2>
+        <p>
+          When you use our temp phone app, you can be certain of one thing lower communication costs.
+          All of our subscriptions are fairly priced and convenient for all kinds of user.
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  
+      <!-- SIM Card - Real SIM vs Virtual Numbers -->
+      <section class="sim-section py-5 mt-5" id="real-sim-vs-virtual">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="text-center mb-5">
+                <span class="sim-badge mb-2">
+                  <i class="fa-solid fa-circle-info"></i>
+                  Why real SIM cards matter
+                </span>
+                <h2 class="sim-title fw-bold">Real SIM vs Virtual Numbers</h2>
+                <p class="sim-subtitle">
+                  Real SIM numbers behave like genuine mobile users, so your verifications are more likely to be
+                  delivered and accepted by apps and services.
+                </p>
+              </div>
+
+              <div class="row g-4 sim-card-row">
+                <!-- Real SIM card -->
+                <div class="col-12 col-md-6">
+                  <div class="sim-comparison-card sim-comparison-card-real h-100">
+                    <div class="sim-card-header">
+                      <div class="sim-card-title">
+                        <span class="sim-card-chip">
+                          <i class="fa-solid fa-sim-card"></i>
+                        </span>
+                        <div>
+                          <h3>Real SIM</h3>
+                          <span class="sim-card-tag">Recommended</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sim-card-body">
+                      <ul class="sim-feature-list">
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-success">
+                            <i class="fa-solid fa-check"></i>
+                          </span>
+                          <span>Physical SIM card in a real device and location</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-success">
+                            <i class="fa-solid fa-check"></i>
+                          </span>
+                          <span>Recognized as a genuine mobile user by most services</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-success">
+                            <i class="fa-solid fa-check"></i>
+                          </span>
+                          <span>Private numbers, not shared publicly</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-success">
+                            <i class="fa-solid fa-check"></i>
+                          </span>
+                          <span>High success rate for OTPs and SMS verifications</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Virtual number card -->
+                <div class="col-12 col-md-6">
+                  <div class="sim-comparison-card sim-comparison-card-virtual h-100">
+                    <div class="sim-card-header">
+                      <div class="sim-card-title">
+                        <span class="sim-card-chip sim-card-chip-muted">
+                          <i class="fa-solid fa-cloud"></i>
+                        </span>
+                        <div>
+                          <h3>Virtual number (VoIP)</h3>
+                          <span class="sim-card-tag sim-card-tag-muted">Limited support</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sim-card-body">
+                      <ul class="sim-feature-list">
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-danger">
+                            <i class="fa-solid fa-xmark"></i>
+                          </span>
+                          <span>No physical SIM, relies on VoIP infrastructure</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-danger">
+                            <i class="fa-solid fa-xmark"></i>
+                          </span>
+                          <span>Often blocked or flagged by apps and services</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-danger">
+                            <i class="fa-solid fa-xmark"></i>
+                          </span>
+                          <span>Can be shared or recycled between many users</span>
+                        </li>
+                        <li>
+                          <span class="sim-feature-icon sim-feature-icon-warning">
+                            <i class="fa-solid fa-exclamation"></i>
+                          </span>
+                          <span>Lower reliability for OTPs and sensitive verifications</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- use case -->
+      <section class="use-section" id="usecase">
+        <div class="container">
+          <div class="use-header text-center mb-4 mb-md-5">
+            <h2 class="use-title fw-bold">Use Cases</h2>
+            <p class="use-subtitle text-muted mb-0">
+              Check out some popular ways Temp Number helps you stay private and secure.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase1.svg" alt="SMS Verification Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">SMS Verification</h5>
+                <p class="card-text">Use disposable numbers to verify online accounts without exposing your real phone.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase2.svg" alt="Deliverability Testing Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">Deliverability Testing</h5>
+                <p class="card-text">Test OTP flows and SMS campaigns at scale across different carriers and regions.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase3.svg" alt="Manual Testing Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">Manual Testing</h5>
+                <p class="card-text">Run QA tests without using your personal number or sharing team phones.</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase4.svg" alt="Monitoring Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">Monitoring</h5>
+                <p class="card-text">Continuously monitor production SMS routes and reliability with real numbers.</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase5.svg" alt="Fast Access Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">Fast Access</h5>
+                <p class="card-text">Instantly get numbers from many countries and carriers when you need them.</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="use-card h-100 text-center">
+                <div class="use-card-icon">
+                  <img src="/image/usecase6.svg" alt="Hide Real Number Icon" width="64" loading="lazy">
+                </div>
+                <h5 class="use-card-title">Hide Real Number</h5>
+                <p class="card-text">Protect yourself from spam, phishing, and unwanted contact by using shielded
+                  numbers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- service and country -->
+
+      <!-- enterprice -->
+      <section class="enterprise-section py-5" id="enterprise">
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-12 col-lg-6">
+              <div class="enterprise-copy-card h-100">
+                <span class="enterprise-badge">
+                  <i class="fa-solid fa-building"></i>
+                  Enterprise-grade solutions
+                </span>
+                <h2 class="enterprise-title fw-bold mt-3">Enterprise Clients</h2>
+                <p class="enterprise-subtitle text-muted">
+                  For global teams and enterprises, Temp Number provides flexible tools to keep verification and
+                  communication reliable at scale.
+                </p>
+                <ul class="enterprise-list">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Access to global benchmarks and performance insights
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-headset"></i>
+                    Dedicated account management and priority support
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-shield"></i>
+                    Compliance-ready workflows for finance and corporate teams
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="enterprise-logos-wrapper h-100">
+                <p class="enterprise-logos-label text-muted mb-3 mb-lg-4">
+                  Trusted by teams at:
+                </p>
+                <div class="client-container">
+                  <div class="client-box">
+                    <img src="/image/google.webp" alt="Google" height="40" loading="lazy">
+                  </div>
+                  <div class="client-box">
+                    <img src="/image/ibm.webp" alt="IBM" height="40" loading="lazy">
+                  </div>
+                  <div class="client-box">
+                    <img src="/image/oracle.webp" alt="Oracle" height="40" loading="lazy">
+                  </div>
+                  <div class="client-box">
+                    <img src="/image/coinbase.webp" alt="Coinbase" height="40" loading="lazy">
+                  </div>
+                  <div class="client-box">
+                    <img src="/image/amazon.webp" alt="Amazon" height="40" loading="lazy">
+                  </div>
+                  <div class="client-box">
+                    <img src="/image/meta.webp" alt="Meta" height="40" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- Powerful API Section -->
+        <!-- <div class="row mb-5 align-items-center">
+      <div class="col-lg-6">
+        <img src="/image/api.png" alt="API Preview" class="img-fluid" width="800" loading="lazy">
+      </div>
+      <div class="col-12 col-lg-6 p-3 p-lg-5">
+        
+        <h3 class="text-center text-lg-start mb-3 fw-bold">Powerful API</h3>
+
+        <p class="text-center text-lg-start mb-4 text-muted">
+          No matter how many verifications you need, the API makes it easy to automate workflows.
+          <br><br>Designed for developers
+          <br>Scalable for any size
+          <br>Built for performance
+        </p>
+
+        <div class="text-center text-lg-start">
+          <a href="api.ejs" class="btn btn-orange">API Docs -></a>
+        </div>
+      </div>
+    </div> -->
+
+        <!-- Partnership Section -->
+        <!-- <div class="container py-5" id="partnership">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+         
+          <h2 class="text-center text-lg-start fw-bold">Partnership</h2>
+
+         
+          <p class="text-center text-lg-start text-muted">
+            Partnerships help businesses and organizations create strong foundations.
+            <br><br>Support for collaborations
+            <br>Affiliate and share options
+          </p>
+
+          <div class="text-center text-lg-start mb-5">
+            <a href="/contactus" class="btn btn-orange">Contact Us -&gt;</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <ul class="nav nav-tabs" id="tabMenu" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="suppliers-tab" data-bs-toggle="tab" data-bs-target="#suppliers"
+                type="button" role="tab" aria-controls="suppliers" aria-selected="true">Suppliers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="software-owners-tab" data-bs-toggle="tab" data-bs-target="#software-owners"
+                type="button" role="tab" aria-controls="software-owners" aria-selected="false">Software Owners</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="affiliates-tab" data-bs-toggle="tab" data-bs-target="#affiliates"
+                type="button" role="tab" aria-controls="affiliates" aria-selected="false">Affiliates</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="suppliers" role="tabpanel" aria-labelledby="suppliers-tab">
+             
+              <p>Please contact us if you are a supplier.</p>
+              <img src="/image/Suppliers.png" alt="Suppliers" class="img-fluid" width="800" loading="lazy">
+            </div>
+            <div class="tab-pane fade" id="software-owners" role="tabpanel" aria-labelledby="software-owners-tab">
+              <p>Details for software owners will be displayed here.</p>
+              <img src="https://via.placeholder.com/400x300" alt="Software Owners" class="img-fluid" width="400" loading="lazy">
+            </div>
+            <div class="tab-pane fade" id="affiliates" role="tabpanel" aria-labelledby="affiliates-tab">
+              <p>Details for affiliates will be displayed here.</p>
+              <img src="https://via.placeholder.com/400x300" alt="Affiliates" class="img-fluid" width="400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+      </div>
+
+      <!-- FAQ -->
+      <section class="faq-section" id="faq">
+        <div class="container py-5 my-4 my-md-5">
+          <div class="faq-header text-center mb-4 mb-md-5">
+            <p class="faq-kicker text-uppercase mb-1">Support</p>
+            <h2 class="faq-title fw-bold">Frequently Asked Questions</h2>
+            <p class="faq-subtitle text-muted mb-0">
+              Quick answers to the most common questions about Temp Number and temporary phone numbers.
+            </p>
+          </div>
+
+          <div class="faq-list mx-auto">
+            <div class="accordion faq-accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                    aria-expanded="true" aria-controls="faq1">
+                    Can I get a temporary phone number with DialerHQ?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes, DialerHQ is a leading temporary number provider that offers temporary or second numbers for 80+
+                    countries spanning continents.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+                    aria-controls="faq2">
+                    What is the pricing structure for temporary phone numbers with DialerHQ?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Pricing structures vary depending on the country and duration of use. Check the DialerHQ website for
+                    detailed pricing.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"
+                    aria-controls="faq3">
+                    How reliable are DialerHQ's services for temporary phone numbers?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    DialerHQ provides highly reliable services with excellent call quality and global coverage.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"
+                    aria-controls="faq4">
+                    How do I set up a virtual phone number for temporary use with DialerHQ?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Setting up a virtual phone number is easy and can be done through DialerHQ's user-friendly app or
+                    website.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"
+                    aria-controls="faq5">
+                    What advanced features does DialerHQ offer for virtual phone numbers used temporarily?
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Advanced features include call forwarding, SMS forwarding, and voicemail options.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section class="download-section" id="download">
+        <div class="container">
+          <div class="download-card row align-items-center gx-4 gy-4 mx-auto">
+            <!-- Text Section -->
+            <div class="col-lg-6 col-md-12 text-center text-lg-start mb-4 mb-lg-0 order-2 order-lg-1">
+              <div class="download-text">
+                <p class="download-kicker text-uppercase mb-2">Get the app</p>
+                <h2 class="download-title fw-bold mb-3">Start receiving SMS in minutes</h2>
+                <p class="download-subtitle mb-4">
+                  Install Temp Number on your favorite device and get secure, disposable phone numbers in just a few
+                  taps—no contracts, no long setup.
+                </p>
+                <div class="download-buttons d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+                  <a class="download-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg"
+                      alt="Download on the App Store" height="40" loading="lazy">
+                  </a>
+                  <a class="download-badge">
+                    <img src="/image/playgorund.png" alt="Get it on Google Play" height="40" loading="lazy">
+                  </a>
+                  <a class="download-badge">
+                    <img src="/image/Microsoft-Store.png" alt="Get it from Microsoft Store" height="40" loading="lazy">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-6 col-md-12 order-1 order-lg-2 mb-4 mb-lg-0">
+              <div class="down-img">
+                <img src="/image/download.png" alt="Temp Number app preview" class="down-img-img" width="600" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- feedback -->
+      <section class="feedback-section" id="feedback">
+        <div class="container">
+          <div class="text-center mb-4 mb-md-5">
+            <h2 class="feedback-heading">Our clients reviews</h2>
+            <p class="feedback-subtitle">Over 100,000 paid customers rely on our services and counting...</p>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Tweets Card -->
+            <div class="col">
+              <div class="feedback-card">
+                <div class="feedback-card-header">
+                  <div class="feedback-platform-icon feedback-icon-twitter">
+                    <i class="fab fa-twitter"></i>
+                  </div>
+                  <h5 class="feedback-title">Tweets</h5>
+                </div>
+                <div class="feedback-card-body">
+                  <p class="feedback-comment">"Tremendous experience! Bitcoin withdrawals are fast and reliable."</p>
+                </div>
+                <div class="feedback-card-footer">
+                  <a href="#" class="feedback-author">@CryptoFan123</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- App Store Card -->
+            <div class="col">
+              <div class="feedback-card">
+                <div class="feedback-card-header">
+                  <div class="feedback-platform-icon feedback-icon-apple">
+                    <i class="fab fa-apple"></i>
+                  </div>
+                  <h5 class="feedback-title">App Store</h5>
+                </div>
+                <div class="feedback-card-body">
+                  <p class="feedback-comment">"Excellent app! Customer service is fantastic."</p>
+                </div>
+                <div class="feedback-card-footer">
+                  <div class="feedback-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Play Store Card -->
+            <div class="col">
+              <div class="feedback-card">
+                <div class="feedback-card-header">
+                  <div class="feedback-platform-icon feedback-icon-google">
+                    <i class="fab fa-google-play"></i>
+                  </div>
+                  <h5 class="feedback-title">Play Store</h5>
+                </div>
+                <div class="feedback-card-body">
+                  <p class="feedback-comment">"Fast, reliable, and user-friendly. Highly recommended!"</p>
+                </div>
+                <div class="feedback-card-footer">
+                  <div class="feedback-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <%- include('../components/footer') %>
+
+        <script src="/js/script.js" defer></script>
+        <script src="/js/index.js" defer></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

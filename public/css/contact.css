@@ -1,0 +1,308 @@
+/* Contact Section Styles */
+.get-in-touch {
+    background: linear-gradient(135deg, rgba(153, 72, 197, 0.02) 0%, rgba(244, 122, 203, 0.02) 50%, #ffffff 100%);
+    min-height: calc(100vh - 200px);
+    padding: 60px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header Styles */
+.contact-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.contact-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .get-in-touch {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .get-in-touch {
+        padding: 30px 0;
+    }
+}
+
+/* Smooth Scrolling */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Contact Form Styles */
+.contact-form-wrapper {
+    background: #ffffff;
+    border: 1px solid rgba(153, 72, 197, 0.12);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 18px 40px rgba(26, 26, 67, 0.08);
+}
+
+.contact-form-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-form-subtitle {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.form-label i {
+    color: #9948c5;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #1a1a2e;
+    background: #ffffff;
+    border: 2px solid rgba(153, 72, 197, 0.15);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border-color: #9948c5;
+    box-shadow: 0 0 0 4px rgba(153, 72, 197, 0.1);
+    background: #ffffff;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9948c5 0%, #7c2c91 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(153, 72, 197, 0.3);
+}
+
+.contact-submit-btn:hover {
+    background: linear-gradient(135deg, #7c2c91 0%, #9948c5 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(153, 72, 197, 0.4);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+.contact-submit-btn i {
+    font-size: 1.1rem;
+}
+
+/* Alternative Contact Methods */
+.contact-alternatives {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.contact-alternative-link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(153, 72, 197, 0.12);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #1a1a2e;
+    box-shadow: 0 8px 24px rgba(26, 26, 67, 0.08);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-alternative-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(153, 72, 197, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-alternative-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.contact-alternative-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.contact-alternative-content h4 {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.contact-alternative-content p {
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Form */
+@media (max-width: 991.98px) {
+    .contact-form-wrapper {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .contact-alternative-link {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .contact-alternative-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-alternative-icon i {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-form-wrapper {
+        padding: 1.5rem 1.25rem;
+        border-radius: 14px;
+    }
+
+    .contact-alternative-link {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .contact-alternative-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .contact-alternative-icon i {
+        font-size: 1.75rem;
+    }
+
+    .contact-alternative-content {
+        align-items: center;
+    }
+}
+
+/* Ensure Navbar Toggle Button is Visible */
+.navbar-toggler {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .get-in-touch {
+        background: white;
+    }
+
+    .contact-form-wrapper {
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+    }
+
+    .toast-container {
+        display: none;
+    }
+}

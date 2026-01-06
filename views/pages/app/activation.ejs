@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Receive SMS verification codes instantly with your temporary phone number. View incoming messages in real-time for secure account activation.">
+  <meta name="keywords" content="SMS activation, receive SMS, verification code, OTP code, phone number activation">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://temp-number.com/app/activation">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://temp-number.com/app/activation">
+  <meta property="og:title" content="Activation - Receive SMS Messages | Temp Number">
+  <meta property="og:description" content="Receive SMS verification codes instantly with your temporary phone number. View incoming messages in real-time for secure account activation.">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Activation - Receive SMS Messages | Temp Number">
+  <meta name="twitter:description" content="Receive SMS verification codes instantly with your temporary phone number. View incoming messages in real-time for secure account activation.">
+  
+  <title>Activation - Receive SMS Messages | Temp Number</title>
+  <link rel="icon" href="/image/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css"> 
+  <link rel="stylesheet" href="/css/app.css">
+  <style>
+    /* ============================================
+       ACTIVATION PAGE - User-Friendly & Responsive
+       ============================================ */
+    
+    .activation-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .activation-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .activation-title {
+      font-weight: 700;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .activation-subtitle {
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      color: #6c757d;
+      margin: 0;
+    }
+
+    /* SMS Container */
+    .sms-container {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 18px 40px rgba(26, 26, 67, 0.08);
+      border: 1px solid rgba(153, 72, 197, 0.12);
+      margin-bottom: 1.5rem;
+    }
+
+    .sms-header {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #1a1a2e;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sms-header i {
+      color: #9948c5;
+    }
+
+    .sms-content {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Phone Number Box */
+    .phone-number-box {
+      background: linear-gradient(135deg, rgba(153, 72, 197, 0.08) 0%, rgba(244, 122, 203, 0.08) 100%);
+      border: 1px solid rgba(153, 72, 197, 0.15);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .phone-number-label {
+      font-size: 0.9rem;
+      color: #6c757d;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .phone-number-display {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .phone-number-text {
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 700;
+      color: #1a1a2e;
+      flex: 1;
+      min-width: 200px;
+      word-break: break-all;
+    }
+
+    .phone-number-text #countryCode {
+      background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .phone-number-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      background: #ffffff;
+      border: 2px solid rgba(153, 72, 197, 0.2);
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #9948c5;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .action-btn:hover {
+      background: linear-gradient(135deg, #9948c5 0%, #7c2c91 100%);
+      color: #ffffff;
+      border-color: #9948c5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(153, 72, 197, 0.3);
+    }
+
+    .action-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Info Card */
+    .info-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 18px 40px rgba(26, 26, 67, 0.08);
+      border: 1px solid rgba(153, 72, 197, 0.12);
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .service-badge {
+      background: linear-gradient(135deg, #9948c5 0%, #7c2c91 50%, #f47acb 100%);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+    }
+
+    .expiry-badge {
+      background-color: #ffc107 !important;
+      color: #000 !important;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .info-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(153, 72, 197, 0.2), transparent);
+      margin: 1.5rem 0;
+    }
+
+    /* Rating Section */
+    .rating-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .rating-label {
+      font-weight: 500;
+      color: #1a1a2e;
+      font-size: 0.95rem;
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .rating-star {
+      font-size: 1.5rem;
+      color: #e9ecef;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rating-star:hover,
+    .rating-star.active {
+      color: #f4a261;
+      transform: scale(1.1);
+    }
+
+    /* Help Section */
+    .help-section {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .help-link {
+      color: #dc3545;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .help-link:hover {
+      color: #c82333;
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 767.98px) {
+      .activation-container {
+        padding: 1.5rem 0.75rem;
+      }
+
+      .sms-container {
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+      }
+
+      .phone-number-box {
+        padding: 1.25rem;
+        border-radius: 12px;
+      }
+
+      .phone-number-display {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .phone-number-text {
+        text-align: center;
+        min-width: auto;
+      }
+
+      .phone-number-actions {
+        justify-content: center;
+      }
+
+      .action-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 120px;
+      }
+
+      .info-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+      }
+
+      .rating-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .activation-container {
+        padding: 1rem 0.5rem;
+      }
+
+      .sms-container {
+        padding: 1.25rem 0.875rem;
+        border-radius: 14px;
+      }
+
+      .phone-number-box {
+        padding: 1rem;
+      }
+
+      .phone-number-actions {
+        flex-direction: column;
+      }
+
+      .action-btn {
+        width: 100%;
+      }
+
+      .info-card {
+        padding: 1rem;
+        border-radius: 14px;
+      }
+
+      .badge-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <%- include('../../components/app_navbar') %>
+
+  <div class="outer-container py-4 py-md-5">
+    <div class="activation-container">
+      <!-- Header Section -->
+      <div class="activation-header">
+        <h1 class="activation-title">Getting SMS...</h1>
+        <p class="activation-subtitle">Only successful activations are paid<br>No message - No payment</p>
+      </div>
+
+      <!-- SMS Container -->
+      <div class="sms-container">
+        <div class="sms-header">
+          <i class="fas fa-sms"></i>
+          <span>Received SMS:</span>
+        </div>
+        <div id="smsContent" class="sms-content">
+          <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Number Box -->
+      <div class="phone-number-box">
+        <div class="phone-number-label">Your Temporary Number</div>
+        <div class="phone-number-display">
+          <div class="phone-number-text">
+            <span id="countryCode"></span><span id="phoneNumber">Fetching...</span>
+          </div>
+          <div class="phone-number-actions">
+            <button class="action-btn" onclick="copyToClipboard(event)">
+              <i class="fas fa-copy"></i>
+              <span>Copy</span>
+            </button>
+            <button class="action-btn" onclick="clearCurrentNumber()">
+              <i class="fas fa-redo"></i>
+              <span>New</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Card -->
+      <div class="info-card">
+        <div class="badge-container">
+          <span class="service-badge" id="activationSelectedService">None</span>
+          <span class="service-badge" id="activationSelectedCountry">None</span>
+          <span id="numberExpiryTimer" class="expiry-badge d-none">
+            <i class="fas fa-clock me-1"></i>
+            Expires in: <span id="expiryTime">00:00</span>
+          </span>
+        </div>
+
+        <div class="info-divider"></div>
+
+        <!-- Rating Section -->
+        <div class="rating-section">
+          <span class="rating-label">Rate number</span>
+          <div class="rating-stars">
+            <span class="rating-star">⭐</span>
+            <span class="rating-star">⭐</span>
+            <span class="rating-star">⭐</span>
+            <span class="rating-star">⭐</span>
+            <span class="rating-star">⭐</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="help-section">
+        <a href="#" class="help-link">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Need Help?</span>
+        </a>
+      </div>
+    </div>
+  </div>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/activation.js" defer></script>
+    <script>
+        async function copyToClipboard(event) {
+            const countryCode = document.getElementById("countryCode").innerText;
+            const phoneNumber = document.getElementById("phoneNumber").innerText;
+            const fullNumber = `${countryCode} ${phoneNumber}`.trim(); 
+
+            try {
+                await navigator.clipboard.writeText(fullNumber);
+                // Show success feedback
+                const copyBtn = event ? event.target.closest('.action-btn') : document.querySelector('.action-btn');
+                if (copyBtn) {
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i> <span>Copied!</span>';
+                    copyBtn.style.background = 'linear-gradient(135deg, #28a745 0%, #20c997 100%)';
+                    copyBtn.style.borderColor = '#28a745';
+                    copyBtn.style.color = '#ffffff';
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.style.background = '';
+                        copyBtn.style.borderColor = '';
+                        copyBtn.style.color = '';
+                    }, 2000);
+                }
+            } catch (err) {
+                // Fallback for older browsers
+                const tempInput = document.createElement("input");
+                tempInput.value = fullNumber;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                alert("Copied: " + fullNumber);
+            }
+        }
+        
+    document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve selected country and service from localStorage
+    const selectedCountry = localStorage.getItem('selectedCountry');
+    const selectedService = localStorage.getItem('selectedService');
+
+    // Display selected country and service
+    if (selectedCountry) {
+        document.getElementById('activationSelectedCountry').textContent = selectedCountry;
+    } else {
+        document.getElementById('activationSelectedCountry').textContent = 'None';
+    }
+
+    if (selectedService) {
+        document.getElementById('activationSelectedService').textContent = selectedService;
+    } else {
+        document.getElementById('activationSelectedService').textContent = 'None';
+    }
+
+    // Fetch the phone number
+    // fetchPhoneNumber();
+    });
+
+//     async function fetchPhoneNumber() {
+//     const countryCode = localStorage.getItem('selectedCountryCode');
+//     const serviceCode = localStorage.getItem('selectedServiceCode');
+
+//     if (!countryCode || !serviceCode) {
+//         document.getElementById('phoneNumber').textContent = 'Please select a country and service';
+//         return;
+//     }
+
+//     try {
+//         // const response = await fetch(`http://localhost:3000/api/activation?country=${countryCode}&service=${serviceCode}`);
+//         if (!response.ok) {
+//             throw new Error(`Network response was not ok: ${response.statusText}`);
+//         }
+//         const data = await response.json();
+
+//         if (data.phoneNumber) {
+//             document.getElementById('countryCode').textContent = data.dialCode;
+//             document.getElementById('phoneNumber').textContent = data.phoneNumber;
+//         } else {
+//             document.getElementById('phoneNumber').textContent = 'No number available for the selected options';
+//         }
+//     } catch (error) {
+//         console.error('Error fetching number:', error);
+//         document.getElementById('phoneNumber').textContent = 'Error fetching number';
+//     }
+// }
+
+</script>      
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top py-3 main-navbar" role="navigation"
+    aria-label="Main navigation">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2 brand-area" href="/" aria-label="Temp Number Home">
+            <span class="logo-shell flex-shrink-0">
+                <img src="/image/logo.png" alt="Temp Number logo" class="logo" style="height: 46px;" loading="eager">
+            </span>
+            <div class="d-flex flex-column lh-1 brand-copy">
+                <strong class="fw-semibold text-uppercase">Temp Number</strong>
+                <small class="text-muted text-capitalize">receive sms online</small>
+            </div>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none rounded-3 nav-toggle-btn" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation menu" aria-haspopup="true">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-panel">
+                <div class="navbar-body">
+                    <ul class="navbar-nav nav-links" role="menubar">
+                        <li class="nav-item dropdown" role="none">
+                            <a class="nav-link nav-link-pill fw-semibold d-flex align-items-center gap-1" href="#"
+                                role="menuitem" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false" aria-haspopup="true" id="productDropdown">
+                                <span>Product</span>
+                                <span class="nav-caret" aria-hidden="true"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm rounded-4 nav-dropdown" role="menu"
+                                aria-labelledby="productDropdown">
+                                <li role="none"><a class="dropdown-item" href="#feature" role="menuitem">Features</a>
+                                </li>
+                                <li role="none"><a class="dropdown-item" href="#how-it-works" role="menuitem">How it
+                                        works</a></li>
+                                <li role="none"><a class="dropdown-item" href="#simcard" role="menuitem">RealSim vs
+                                        Virtual</a></li>
+                                <li role="none"><a class="dropdown-item" href="#usecase" role="menuitem">Use Case</a>
+                                </li>
+                                <li role="none"><a class="dropdown-item" href="#enterprise"
+                                        role="menuitem">Enterprise</a></li>
+                                <li role="none"><a class="dropdown-item" href="#feedback" role="menuitem">Customer
+                                        Stories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" role="none">
+                            <a class="nav-link nav-link-pill fw-semibold d-flex align-items-center gap-1" href="#"
+                                role="menuitem" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false" aria-haspopup="true" id="resourcesDropdown">
+                                <span>Resources</span>
+                                <span class="nav-caret" aria-hidden="true"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm rounded-4 nav-dropdown" role="menu"
+                                aria-labelledby="resourcesDropdown">
+                                <li role="none"><a class="dropdown-item" href="#faq" role="menuitem">FAQ</a></li>
+                                <li role="none"><a class="dropdown-item" href="#download" role="menuitem">Download</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold nav-link-pill" href="#api" role="menuitem">API</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold nav-link-pill" href="#partnership"
+                                role="menuitem">Partnership</a>
+                        </li>
+                        <li class="nav-item dropdown" role="none">
+                            <a class="nav-link nav-link-pill lang border rounded-pill px-3 py-1 text-secondary d-flex align-items-center gap-1"
+                                href="#" role="menuitem" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false" aria-haspopup="true" id="languageDropdown">
+                                <span>English</span>
+                                <span class="nav-caret" aria-hidden="true"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm rounded-4 nav-dropdown" role="menu"
+                                aria-labelledby="languageDropdown">
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">English</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Arabic</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Chinese</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Portuguese</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Spanish</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Russian</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Turkish</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3 mt-4 mt-lg-0 nav-actions">
+                        <% if (customer) { %>
+                            <!-- <span class="text-secondary small fw-semibold user-greeting">Hi, <%= customer.email %>
+                            </span> -->
+                            <a href="/app/logout" class="btn btn-outline-danger rounded-pill px-4 nav-btn"
+                                role="button">Logout</a>
+                            <% } else { %>
+                                <a href="/app/login" class="btn btn-outline-secondary rounded-pill px-4 nav-btn py-2"
+                                    role="button">Login</a>
+                                <a href="/try_now" class="btn btn-primary gradient-btn rounded-pill px-4 nav-btn py-2"
+                                    role="button">Get Started</a>
+                                <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
